@@ -30,7 +30,7 @@ jobs:
     - run: flutter build appbundle
 
     - name: compress zip apk
-      run:  zip -r /home/runner/work/game-of-thrones-quotes-flutter/game-of-thrones-quotes-flutter/build/app/outputs/flutter-apk
+      run: cd $GITHUB_WORKSPACE/build/app/outputs && zip -r flutter-apk.zip flutter-apk
     
     # upload artifact
     - name: Upload android artifact
